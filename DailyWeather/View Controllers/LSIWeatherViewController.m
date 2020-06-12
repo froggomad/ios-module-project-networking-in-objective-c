@@ -10,6 +10,8 @@
 #import "LSIWeatherIcons.h"
 #import "LSIErrors.h"
 #import "LSILog.h"
+#import "HSIWeatherFetcher.h"
+#import "HSIWeatherForecast.h"
 
 @interface LSIWeatherViewController () {
     BOOL _requestedLocation;
@@ -154,6 +156,11 @@
     
     // Stop updating location after getting one (NOTE: this is faster than doing a single location request)
     [manager stopUpdatingLocation];
+    //only tested once to ensure it works
+//    HSIWeatherFetcher *fetcher = [[HSIWeatherFetcher alloc] init];
+//    [fetcher fetchWeatherAtLocation:location.coordinate completion:^(HSIWeatherForecast *forecastObject) {
+//        NSLog(@"%@", forecastObject.dailyForecasts);
+//    }];
 }
 
 @end

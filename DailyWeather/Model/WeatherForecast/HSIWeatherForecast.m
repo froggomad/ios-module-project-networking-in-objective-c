@@ -25,7 +25,6 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *) dictionary {
 
-
     NSDictionary *currentForecastData = dictionary[@"currently"];
     NSArray *dailyForecastsData = dictionary[@"daily"][@"data"];
     NSArray *hourlyForecastsData = dictionary[@"hourly"][@"data"];
